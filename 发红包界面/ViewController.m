@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "CBHongBaoVC.h"
 @interface ViewController ()
 
 @end
@@ -18,7 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CBHongBaoVC *vc = [[CBHongBaoVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
