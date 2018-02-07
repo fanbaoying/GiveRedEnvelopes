@@ -131,7 +131,7 @@
         cell.numLab.text = @"个";
     } else {
         cell.contentText.hidden = NO;
-        cell.contentText.placeholder = @"恭喜发财 大吉大利";
+//        cell.contentText.placeholder = @"恭喜发财 大吉大利";
         
     }
     

@@ -22,6 +22,28 @@
     self.baseView.layer.cornerRadius = 5;
     self.contentView.backgroundColor = RGB(240, 239, 246);
     // Initialization code
+    
+    UILabel *placeHolderLabel = [[UILabel alloc] init];
+    placeHolderLabel.text = @"恭喜发财 大吉大利";
+    placeHolderLabel.numberOfLines = 0;
+    placeHolderLabel.textColor = [UIColor lightGrayColor];
+    [placeHolderLabel sizeToFit];
+    [ self.contentText addSubview:placeHolderLabel];
+    // same font
+    self.contentText.font = [UIFont systemFontOfSize:17.f];
+    placeHolderLabel.font = [UIFont systemFontOfSize:17.f];
+    
+    [ self.contentText setValue:placeHolderLabel forKey:@"_placeholderLabel"];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    //将触摸事件添加到view上
+    [self addGestureRecognizer:tapGestureRecognizer];
+}
+
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.contentText resignFirstResponder];
+    [self.numText resignFirstResponder];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

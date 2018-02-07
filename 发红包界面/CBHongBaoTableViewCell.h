@@ -11,7 +11,7 @@
 @interface CBHongBaoTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *hbImg;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
-@property (weak, nonatomic) IBOutlet UITextField *contentText;
+@property (weak, nonatomic) IBOutlet UITextView *contentText;
 @property (weak, nonatomic) IBOutlet UILabel *numLab;
 @property (weak, nonatomic) IBOutlet UITextField *numText;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftLab;
